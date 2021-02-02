@@ -1,4 +1,5 @@
 const multer = require("multer");
+const path = require("path");
 
 exports.fileStorage = multer.diskStorage({
     filename: (req, file, cb) => {
@@ -17,3 +18,5 @@ exports.fileFilter = (req, file, cb) => {
         cb(null, false);
     }
 };
+
+exports.defaultElmtPerPage="2";
